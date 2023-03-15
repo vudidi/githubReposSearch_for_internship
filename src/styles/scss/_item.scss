@@ -1,0 +1,90 @@
+.item {
+  width: 100%;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  &__owner-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+  }
+  &__info {
+    width: 90%;
+    padding: 10px 0;
+    border-bottom: 1px solid #475c44;
+  }
+  &__title {
+    margin: 0;
+    color: #91bf79;
+    font-size: 24px;
+  }
+  &__visibility {
+    background-image: url("../images/icon-visible.svg");
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+    margin: 5px 0;
+  }
+  &__description {
+    color: #91bf79;
+    font-size: 18px;
+    margin: 0 0 24px;
+  }
+  &__update {
+    color: #959595;
+    font-size: 16px;
+    margin: 0 0 5px;
+  }
+  &__create {
+    color: #959595;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .item {
+    &__title {
+      margin: 0;
+      font-size: 18px;
+    }
+    &__visibility {
+      margin: 5px 0;
+    }
+    &__description {
+      font-size: 16px;
+      margin: 0 0 24px;
+    }
+    &__update {
+      font-size: 12px;
+      margin: 0 0 5px;
+    }
+    &__create {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    &__title {
+      margin: 0;
+      font-size: 15px;
+    }
+    &__visibility {
+      margin: 5px 0;
+    }
+    &__description {
+      font-size: 15px;
+      margin: 0 0 24px;
+    }
+    &__update {
+      font-size: 10px;
+      margin: 0 0 5px;
+    }
+    &__create {
+      font-size: 10px;
+    }
+  }
+}
