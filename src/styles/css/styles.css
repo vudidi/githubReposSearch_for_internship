@@ -486,8 +486,13 @@ h6 {
   top: 50px;
   left: 0;
 }
-.search__error_visible {
-  display: block;
+.search__no-results {
+  display: none;
+  color: #ce6046;
+  font-size: 16px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
 }
 .search__button {
   width: 180px;
@@ -589,16 +594,19 @@ h6 {
     font-size: 12px;
   }
 }
-.item {
+.items {
   width: 100%;
-  margin: 0 auto 40px;
+  margin: 0 auto;
+}
+
+.item {
+  margin: 0 10px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 30px;
 }
 .item__owner-avatar {
   width: 64px;
@@ -607,39 +615,54 @@ h6 {
   margin: 0 10px 0 0;
 }
 .item__info {
-  width: 90%;
+  width: 80%;
   padding: 10px 0;
   border-bottom: 1px solid #475c44;
 }
-.item__title {
+.item__link {
   margin: 0;
   color: #91bf79;
   font-size: 24px;
+  word-wrap: break-word;
+  width: 90%;
 }
 .item__visibility {
+  margin: 5px 0;
+}
+.item__visibility_type_public {
   background-image: url("../images/icon-visible.svg");
   background-size: cover;
   width: 18px;
   height: 18px;
-  margin: 5px 0;
+}
+.item__visibility_type_private {
+  background-image: url("../images/icon-hidden.svg");
+  background-size: cover;
+  width: 18px;
+  height: 18px;
 }
 .item__description {
   color: #91bf79;
   font-size: 18px;
   margin: 0 0 24px;
+  word-wrap: break-word;
+  width: 90%;
+  cursor: default;
 }
 .item__update {
   color: #959595;
   font-size: 16px;
   margin: 0 0 5px;
+  cursor: default;
 }
 .item__create {
   color: #959595;
   font-size: 16px;
+  cursor: default;
 }
 
 @media screen and (max-width: 900px) {
-  .item__title {
+  .item__link {
     margin: 0;
     font-size: 18px;
   }
@@ -659,15 +682,19 @@ h6 {
   }
 }
 @media screen and (max-width: 600px) {
-  .item__title {
+  .item__owner-avatar {
+    width: 52px;
+    height: 52px;
+  }
+  .item__link {
     margin: 0;
-    font-size: 15px;
+    font-size: 14px;
   }
   .item__visibility {
     margin: 5px 0;
   }
   .item__description {
-    font-size: 15px;
+    font-size: 12px;
     margin: 0 0 24px;
   }
   .item__update {

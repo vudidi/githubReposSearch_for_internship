@@ -12,96 +12,43 @@
       <header class="header"></header>
 
       <main class="content">
-        <form class="search">
+        <form class="search" name="searchForm" novalidate>
           <div class="search__container">
             <input
               type="search"
               class="search__input"
+              placeholder="Search for repositories..."
               minlength="1"
-              maxlength="256"
-              placeholder="Start typing..."
+              maxlength="257"
+              pattern="\S+"
+              required
             />
-            <span class="search__error">Error</span>
+            <span class="search__error"></span>
+            <p class="search__no-results">No results</p>
           </div>
           <button class="search__button">Search!</button>
         </form>
-        <ul class="items">
-          <li class="item">
-            <img
-              class="item__owner-avatar"
-              src="./styles/images/ava01.png"
-              alt="Owner avatar"
-            />
-            <div class="item__info">
-              <h1 class="item__title">dtrupenn/Tetris</h1>
-              <div class="item__visibility"></div>
-              <p class="item__description">
-                A C implementation of Tetris using Pennsim through LC4
-              </p>
-              <p class="item__update">
-                last updated at <span>2013-01-05</span>
-              </p>
-              <p class="item__create">created at <span>2012-01-01</span></p>
-            </div>
-          </li>
-          <li class="item">
-            <img
-              class="item__owner-avatar"
-              src="./styles/images/ava01.png"
-              alt="Owner avatar"
-            />
-            <div class="item__info">
-              <h1 class="item__title">tSchlegl/f-AnoGAN</h1>
-              <div class="item__visibility"></div>
-              <p class="item__description">
-                Code for reproducing f-AnoGAN training and anomaly scoring
-              </p>
-              <p class="item__update">
-                last updated at <span>2013-01-05</span>
-              </p>
-              <p class="item__create">created at <span>2012-01-01</span></p>
-            </div>
-          </li>
-          <li class="item">
-            <img
-              class="item__owner-avatar"
-              src="./styles/images/ava01.png"
-              alt="Owner avatar"
-            />
-            <div class="item__info">
-              <h1 class="item__title">tSchlegl/f-AnoGAN</h1>
-              <div class="item__visibility"></div>
-              <p class="item__description">
-                Code for reproducing f-AnoGAN training and anomaly scoring
-              </p>
-              <p class="item__update">
-                last updated at <span>2013-01-05</span>
-              </p>
-              <p class="item__create">created at <span>2012-01-01</span></p>
-            </div>
-          </li>
-          <li class="item">
-            <img
-              class="item__owner-avatar"
-              src="./styles/images/ava01.png"
-              alt="Owner avatar"
-            />
-            <div class="item__info">
-              <h1 class="item__title">tSchlegl/f-AnoGAN</h1>
-              <div class="item__visibility"></div>
-              <p class="item__description">
-                Code for reproducing f-AnoGAN training and anomaly scoring
-              </p>
-              <p class="item__update">
-                last updated at <span>2013-01-05</span>
-              </p>
-              <p class="item__create">created at <span>2012-01-01</span></p>
-            </div>
-          </li>
-        </ul>
+        <ul class="items"></ul>
       </main>
 
       <footer class="footer"></footer>
     </div>
+    <template id="tmpl-item">
+      <li class="item">
+        <img
+          class="item__owner-avatar"
+          src="./styles/images/ava01.png"
+          alt="Owner avatar"
+        />
+        <div class="item__info">
+          <a href="#" target="_blank" class="item__link"></a>
+          <div class="item__visibility item__visibility_type_public"></div>
+          <p class="item__description"></p>
+          <p class="item__update">
+            last updated at <span id="item-update"></span>
+          </p>
+          <p class="item__create">created at <span id="item-create"></span></p>
+        </div></li
+    ></template>
   </body>
 </html>

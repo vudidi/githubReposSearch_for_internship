@@ -1,9 +1,7 @@
 .item {
-  width: 100%;
-  margin: 0 auto 40px;
+  margin: 0 10px 40px;
   display: flex;
   justify-content: space-between;
-  padding: 0 30px;
   &__owner-avatar {
     width: 64px;
     height: 64px;
@@ -11,41 +9,57 @@
     margin: 0 10px 0 0;
   }
   &__info {
-    width: 90%;
+    width: 80%;
     padding: 10px 0;
     border-bottom: 1px solid #475c44;
   }
-  &__title {
+  &__link {
     margin: 0;
     color: #91bf79;
     font-size: 24px;
+    word-wrap: break-word;
+    width: 90%;
   }
   &__visibility {
-    background-image: url("../images/icon-visible.svg");
-    background-size: cover;
-    width: 18px;
-    height: 18px;
     margin: 5px 0;
+    &_type_public {
+      background-image: url("../images/icon-visible.svg");
+      background-size: cover;
+      width: 18px;
+      height: 18px;
+    }
+    &_type_private {
+      background-image: url("../images/icon-hidden.svg");
+      background-size: cover;
+      width: 18px;
+      height: 18px;
+    }
   }
   &__description {
     color: #91bf79;
     font-size: 18px;
     margin: 0 0 24px;
+    word-wrap: break-word;
+    width: 90%;
+    cursor: default;
   }
+
   &__update {
     color: #959595;
     font-size: 16px;
     margin: 0 0 5px;
+    cursor: default;
   }
   &__create {
     color: #959595;
     font-size: 16px;
+    cursor: default;
   }
 }
 
 @media screen and (max-width: 900px) {
   .item {
-    &__title {
+    &__link {
       margin: 0;
       font-size: 18px;
     }
@@ -68,15 +82,19 @@
 
 @media screen and (max-width: 600px) {
   .item {
-    &__title {
+    &__owner-avatar {
+      width: 52px;
+      height: 52px;
+    }
+    &__link {
       margin: 0;
-      font-size: 15px;
+      font-size: 14px;
     }
     &__visibility {
       margin: 5px 0;
     }
     &__description {
-      font-size: 15px;
+      font-size: 12px;
       margin: 0 0 24px;
     }
     &__update {

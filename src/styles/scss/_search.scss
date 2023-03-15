@@ -38,9 +38,14 @@
     position: absolute;
     top: 50px;
     left: 0;
-    &_visible {
-      display: block;
-    }
+  }
+  &__no-results {
+    display: none;
+    color: #ce6046;
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
   }
   &__button {
     width: 180px;
