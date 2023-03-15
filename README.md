@@ -23,6 +23,5 @@ ____
 
 `git@github.com:vudidi/githubUserSearch_for_internship.git` - клонировать репозиторий
 
-`npm install` - установить зависимости
+`npm install` - установить зависимости  
 `npm run dev` - запустить проект
-`npm run build` - собрать проект
