@@ -20,6 +20,5 @@ export const api = new Api({
   baseUrl: "https://api.github.com/search/repositories?q=",
   headers: {
     "Content-Type": "application/vnd.github+jso",
-    Authorization: "Bearer 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",
   },
 });
