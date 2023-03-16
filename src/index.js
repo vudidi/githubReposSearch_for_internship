@@ -10,6 +10,14 @@ import {
   reposList,
 } from "./utils/constants";
 
+// Удалить со страницы результаты предыдущего поиска
+function removeLastResults(list) {
+  const lastResultsItems = list.querySelectorAll(".item");
+  lastResultsItems.forEach((el) => {
+    el.remove();
+  });
+}
+
 // Поисковый запрос на сервер
 function searchRepos(query) {
   api
@@ -18,10 +26,10 @@ function searchRepos(query) {
       const repos = res.items.slice(0, 10).reverse();
       if (res.total_count === 0) {
         noResultsMessage.style.display = "block";
-        reposList.style.display = "none";
+        removeLastResults(reposList);
       } else {
+        removeLastResults(reposList);
         repos.map((el) => {
-          reposList.style.display = "block";
           const item = {
             ownerAvatar: el.owner.avatar_url,
             title: el.full_name,
