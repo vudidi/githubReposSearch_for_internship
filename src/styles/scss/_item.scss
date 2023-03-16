@@ -1,12 +1,12 @@
 .item {
-  margin: 0 10px 40px;
+  width: 100%;
+  margin: 0 auto 40px;
   display: flex;
-  justify-content: space-between;
   &__owner-avatar {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    margin: 0 10px 0 0;
+    margin: 0 30px 0 0;
   }
   &__info {
     width: 80%;
@@ -47,7 +47,6 @@
     width: 90%;
     cursor: default;
   }
-
   &__update {
     color: #959595;
     font-size: 16px;
@@ -63,6 +62,9 @@
 
 @media screen and (max-width: 900px) {
   .item {
+    &__owner-avatar {
+      margin: 0 10px 0 0;
+    }
     &__link {
       margin: 0;
       font-size: 18px;

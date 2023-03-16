@@ -606,19 +606,17 @@ h6 {
 }
 
 .item {
-  margin: 0 10px 40px;
+  width: 100%;
+  margin: 0 auto 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .item__owner-avatar {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  margin: 0 10px 0 0;
+  margin: 0 30px 0 0;
 }
 .item__info {
   width: 80%;
@@ -674,6 +672,9 @@ h6 {
 }
 
 @media screen and (max-width: 900px) {
+  .item__owner-avatar {
+    margin: 0 10px 0 0;
+  }
   .item__link {
     margin: 0;
     font-size: 18px;
