@@ -19,6 +19,6 @@ class Api {
 export const api = new Api({
   baseUrl: "https://api.github.com/search/repositories?q=",
   headers: {
-    "Content-Type": "application/vnd.github+jso",
+    Accept: "application/vnd.github+jso",
   },
 });

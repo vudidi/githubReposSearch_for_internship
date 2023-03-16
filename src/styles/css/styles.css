@@ -492,7 +492,7 @@ h6 {
   font-size: 16px;
   position: absolute;
   top: 50px;
-  left: 50%;
+  left: 0;
 }
 .search__button {
   width: 180px;
@@ -593,6 +593,12 @@ h6 {
     width: 120px;
     font-size: 12px;
   }
+  .search__error {
+    font-size: 10px;
+  }
+  .search__no-results {
+    font-size: 10px;
+  }
 }
 .items {
   width: 100%;
@@ -625,6 +631,12 @@ h6 {
   font-size: 24px;
   word-wrap: break-word;
   width: 90%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.item__link:hover {
+  color: #d7d7d7;
 }
 .item__visibility {
   margin: 5px 0;
